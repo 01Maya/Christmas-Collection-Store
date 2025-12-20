@@ -79,7 +79,7 @@ https://christmas-collection-store.vercel.app/
   git clone https://github.com/yourusername/christmas-magic.git
 
 # Navigate to the project directory
-cd christmas-magic
+  cd christmas-magic
 
 # Install dependencies
 npm install
