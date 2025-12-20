@@ -61,7 +61,8 @@ With soft gradients, festive illustrations, smooth transitions, and responsive l
 A festive, elegant, and interactive Christmas website showcasing luxury products, smooth animations, and immersive holiday experiences.
 
 🔗 **Live Demo:**  
-https://christmas-magic.vercel.app/
+
+https://christmas-collection-store.vercel.app/
 
 ---
 
