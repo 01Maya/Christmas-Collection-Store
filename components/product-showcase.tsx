@@ -63,7 +63,6 @@ const products = [
 ]
 
 export function ProductShowcase() {
-  const [selectedProduct, setSelectedProduct] = useState<(typeof products)[0] | null>(null)
   const [flipped, setFlipped] = useState<number | null>(null)
   const [favorites, setFavorites] = useState<number[]>([])
 
@@ -82,7 +81,7 @@ export function ProductShowcase() {
             The Christmas Collection
           </h2>
           <p className="text-base md:text-lg text-[#2C1810]/70 max-w-2xl mx-auto font-medium leading-relaxed animate-fade-in delay-200">
-            Discover our curated selection of premium holiday treasures. Click cards to flip and see details. ✨
+            Discover our curated selection of premium holiday treasures. Tap cards to flip and see details. ✨
           </p>
         </div>
 
@@ -90,83 +89,78 @@ export function ProductShowcase() {
           {products.map((product, index) => (
             <div
               key={product.id}
-              className="h-auto md:h-[520px] cursor-pointer perspective animate-pop-in"
+              className="cursor-pointer animate-pop-in"
               style={{ animationDelay: `${index * 100}ms` }}
               onClick={() => setFlipped(flipped === product.id ? null : product.id)}
             >
               <div
-                className="relative w-full h-full transition-transform duration-500 ease-out"
+                className="relative transition-transform duration-500 ease-out"
                 style={{
                   transformStyle: "preserve-3d",
                   transform: flipped === product.id ? "rotateY(180deg)" : "rotateY(0deg)",
                 }}
               >
-                {/* Front of card */}
-                <div style={{ backfaceVisibility: "hidden" }} className="absolute w-full h-full">
-                  <Card className="group cursor-pointer overflow-hidden bg-white/90 backdrop-blur-md border-2 border-[#E63946]/20 hover:border-[#E63946] transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 rounded-2xl md:rounded-3xl h-full flex flex-col hover:animate-shimmer">
-                    <div className="relative overflow-hidden flex-1 bg-white/50 flex items-center justify-center min-h-[280px]">
+                {/* Front */}
+                <div style={{ backfaceVisibility: "hidden" }}>
+                  <Card className="group bg-white/90 backdrop-blur-md border-2 border-[#E63946]/20 hover:border-[#E63946] transition-all duration-500 hover:shadow-2xl rounded-2xl md:rounded-3xl flex flex-col">
+                    <div className="relative bg-white/50 flex items-center justify-center h-[220px] sm:h-[260px] md:h-[280px]">
                       <img
-                        src={product.image || "/placeholder.svg"}
+                        src={product.image}
                         alt={product.name}
-                        className="w-full h-full object-contain max-w-full max-h-full group-hover:scale-105 transition-transform duration-700 ease-out p-2 md:p-4"
+                        className="w-full h-full object-contain p-3 md:p-4 group-hover:scale-105 transition-transform duration-700"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#2C1810]/60 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
                       <button
                         onClick={(e) => {
                           e.stopPropagation()
                           toggleFavorite(product.id)
                         }}
-                        className="absolute top-3 md:top-4 right-3 md:right-4 bg-white/90 backdrop-blur-md p-2 md:p-3 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 translate-y-2 group-hover:translate-y-0 hover:bg-[#E63946] hover:text-white hover:scale-110 hover:animate-heartbeat"
+                        className="absolute top-3 right-3 bg-white/90 p-2 rounded-full hover:bg-[#E63946] hover:text-white transition"
                       >
                         <Heart
-                          className={`w-5 h-5 md:w-6 md:h-6 transition-colors ${
+                          className={`w-5 h-5 ${
                             favorites.includes(product.id) ? "fill-[#E63946] text-[#E63946]" : ""
                           }`}
                         />
                       </button>
                     </div>
+
                     <div className="p-5 md:p-8">
-                      <h3 className="font-serif text-xl md:text-2xl font-bold text-[#2C1810] mb-2 group-hover:text-[#E63946] transition-colors">
+                      <h3 className="font-serif text-lg md:text-2xl font-bold text-[#2C1810] mb-2">
                         {product.name}
                       </h3>
-                      <p className="text-[#2C1810]/80 text-xs md:text-sm mb-4 line-clamp-2 font-medium">
+                      <p className="text-[#2C1810]/80 text-sm mb-4 line-clamp-2">
                         {product.description}
                       </p>
-                      <div className="flex items-center justify-between border-t border-[#E63946]/20 pt-3 md:pt-4">
-                        <span className="text-xl md:text-2xl font-serif font-bold text-[#E63946]">
+                      <div className="flex items-center justify-between border-t border-[#E63946]/20 pt-3">
+                        <span className="text-xl font-serif font-bold text-[#E63946]">
                           {product.price}
                         </span>
-                        <span className="text-xs uppercase tracking-widest text-[#2C1810]/70 group-hover:text-[#E63946] transition-colors font-bold">
-                          Click to Flip
+                        <span className="text-xs uppercase tracking-widest text-[#2C1810]/70 font-bold">
+                          Tap to Flip
                         </span>
                       </div>
                     </div>
                   </Card>
                 </div>
 
-                {/* Back of card */}
+                {/* Back */}
                 <div
                   style={{ backfaceVisibility: "hidden", transform: "rotateY(180deg)" }}
-                  className="absolute w-full h-full"
+                  className="absolute inset-0"
                 >
-                  <Card className="group overflow-hidden bg-gradient-to-br from-[#E63946]/95 to-[#D62839]/95 border-2 border-[#E63946] backdrop-blur-md rounded-2xl md:rounded-3xl h-full flex flex-col p-5 md:p-8 text-white">
-                    <h3 className="font-serif text-xl md:text-2xl font-bold mb-3 md:mb-4">
+                  <Card className="bg-gradient-to-br from-[#E63946]/95 to-[#D62839]/95 border-2 border-[#E63946] rounded-2xl md:rounded-3xl p-5 md:p-8 text-white flex flex-col h-full">
+                    <h3 className="font-serif text-lg md:text-2xl font-bold mb-4">
                       {product.name}
                     </h3>
-                    <p className="text-sm md:text-base leading-relaxed mb-4 md:mb-6 flex-grow text-white/95 whitespace-pre-line">
+                    <p className="text-sm md:text-base leading-relaxed flex-grow whitespace-pre-line">
                       {product.details}
                     </p>
-                    <div className="space-y-3 md:space-y-4 border-t border-white/30 pt-4 md:pt-6">
-                      <div className="text-2xl md:text-3xl font-serif font-bold">
-                        {product.price}
-                      </div>
-                      <Button
-                        size="lg"
-                        className="w-full bg-white text-[#E63946] hover:bg-[#FFE8E0] transition-all duration-300 py-4 md:py-6 text-sm md:text-base font-serif uppercase tracking-widest rounded-full shadow-lg hover:shadow-xl hover:scale-105 font-bold"
-                      >
-                        🛍️ Add to Cart
-                      </Button>
-                    </div>
+                    <Button
+                      size="lg"
+                      className="mt-6 bg-white text-[#E63946] hover:bg-[#FFE8E0] font-serif uppercase tracking-widest rounded-full"
+                    >
+                      🛍️ Add to Cart
+                    </Button>
                   </Card>
                 </div>
               </div>
