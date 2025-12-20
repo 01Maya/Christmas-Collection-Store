@@ -82,7 +82,7 @@ https://christmas-collection-store.vercel.app/
   cd christmas-magic
 
 # Install dependencies
-npm install
+  npm install
 
 # Run the development server
 npm run dev
