@@ -12,7 +12,6 @@ export const metadata: Metadata = {
   title: "Fun Luxury Christmas Collection | Premium Holiday Gifts",
   description:
     "Experience the magic of Christmas with our handcrafted luxury collection. Premium gifts, elegant designs, and festive elegance.",
-  generator: "v0.app",
 }
 
 export default function RootLayout({
