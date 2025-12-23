@@ -9,7 +9,7 @@ const _geistMono = Geist_Mono({ subsets: ["latin"] })
 const _playfair = Playfair_Display({ subsets: ["latin"], weight: ["400", "500", "600", "700", "800", "900"] })
 
 export const metadata: Metadata = {
-  title: "Fun Luxury Christmas Collection | Premium Holiday Gifts 🎁🎄",
+  title: "Fun Luxury Christmas Collection | Premium Holiday Gifts 🎁🎄✨",
   description:
     "Experience the magic of Christmas with our handcrafted luxury collection. Premium gifts, elegant designs, and festive elegance✨",
 }
