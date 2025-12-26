@@ -11,7 +11,7 @@ const _playfair = Playfair_Display({ subsets: ["latin"], weight: ["400", "500", 
 export const metadata: Metadata = {
   title: "Fun Luxury Christmas Collection | Premium Holiday Gifts 🎁🎄✨",
   description:
-    "Experience the magic of Christmas with our handcrafted luxury collection. Premium gifts, elegant designs, and festive elegance✨",
+    "Experience the magic of Christmas with our handcrafted luxury collection. Premium gifts, elegant designs, and festive elegance 🎄✨",
 }
 
 export default function RootLayout({
