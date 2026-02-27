@@ -75,7 +75,7 @@ https://christmas-collection-store.vercel.app/
 ## ⚙️ Installation
 
 ```bash
-# Clone the repository
+# 1. Clone the repository
   git clone https://github.com/yourusername/christmas-magic.git
 
 # Navigate to the project directory
