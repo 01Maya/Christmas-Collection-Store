@@ -81,7 +81,7 @@ https://christmas-collection-store.vercel.app/
 # 2. Navigate to the project directory
   cd christmas-magic
 
-# Install dependencies
+# 3. Install dependencies
   npm install
 
 # Run the development server
