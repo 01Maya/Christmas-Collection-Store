@@ -85,4 +85,4 @@ https://christmas-collection-store.vercel.app/
   npm install
 
 # 4. Run the development server
-  npm run dev
+     npm run dev
