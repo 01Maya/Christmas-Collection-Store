@@ -4,7 +4,7 @@ A premium, elegant, and animated Christmas-themed website designed to celebrate 
 
 ---
 
-## 🪶 Overview
+## 🪶 Overview 
 
 **Christmas Magic** is a visually rich and motion-driven festive website crafted to showcase handcrafted Christmas products, curated gift collections, and interactive holiday experiences with smooth animations and refined aesthetics.
 
@@ -86,3 +86,6 @@ https://christmas-collection-store.vercel.app/
 
 # 4. Run the development server
      npm run dev
+
+
+---
