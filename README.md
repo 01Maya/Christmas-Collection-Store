@@ -21,7 +21,7 @@ With soft gradients, festive illustrations, smooth transitions, and responsive l
 
 ---
 
-## ✨ Features
+## ✨ Features 💪🏻
 
 - **Responsive Design** – Fully optimized for desktop, tablet, and mobile  
 - **Smooth Scroll Navigation** – Easy navigation between sections  
