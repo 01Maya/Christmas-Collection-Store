@@ -12,7 +12,7 @@ A premium, elegant, and animated Christmas-themed website designed to celebrate 
 
 ---
 
-## 📝 Description
+## 📝 Description ✨
 
 This website blends festive charm with modern design principles to create a delightful holiday shopping and exploration experience.  
 From animated hero sections and flip product cards to interactive Christmas tree customization and countdown timers, the platform captures the spirit of Christmas in a luxurious, minimal, and engaging way.
