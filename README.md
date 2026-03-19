@@ -36,7 +36,7 @@ With soft gradients, festive illustrations, smooth transitions, and responsive l
 
 ---
 
-## 📂 Sections
+## 📂 Sections 🎁
 
 - **Hero:** Festive introduction with CTAs and brand identity  
 - **Handcrafted Magic:** Storytelling section highlighting craftsmanship  
